@@ -1,0 +1,38 @@
+CREATE TABLE `coverage` (
+  `idcoverage` int(11) NOT NULL AUTO_INCREMENT,
+  `CoverageZip` varchar(6) DEFAULT NULL,
+  `OfficeZip` varchar(6) DEFAULT NULL,
+  PRIMARY KEY (`idcoverage`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `orders` (
+  `idOrders` int(11) NOT NULL AUTO_INCREMENT,
+  `MobileNumber` varchar(15) DEFAULT NULL,
+  `ZipCode` varchar(6) DEFAULT NULL,
+  `EmailAddress` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`idOrders`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `schedule` (
+  `idschedule` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) DEFAULT NULL,
+  `technician_id` int(11) DEFAULT NULL,
+  `ynconfirmed` varchar(1) DEFAULT NULL,
+  `sdate` datetime DEFAULT NULL,
+  `slotnumber` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idschedule`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `technician` (
+  `idTechnician` int(11) NOT NULL AUTO_INCREMENT,
+  `TechnicianEmpID` varchar(45) DEFAULT NULL,
+  `TechnicianName` varchar(45) DEFAULT NULL,
+  `OfficeZip` varchar(6) DEFAULT NULL,
+  `EmailID` varchar(100) DEFAULT NULL,
+  `Phone` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idTechnician`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
