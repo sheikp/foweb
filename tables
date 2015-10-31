@@ -291,3 +291,19 @@ INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber
 INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Jayden', 'dfdgdhfh', '9174445889', 'sophia@gmail.com', 'XYZ', 'CA', '9008');
 INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Ava', 'ewwqweqw', '9174445890', 'sophia@gmail.com', 'XYZ', 'CA', '9009');
 INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Noah', 'vcvcvcvc', '9174445891', 'sophia@gmail.com', 'XYZ', 'CA', '9010');
+
+
+
+insert into qa_hacker.automation_results (TestName,Results,Comments,RunID,ExecutionTime) values ('FIOS_CHG_order','PASS','Testing the change order failed',5410, now())
+automation_results
+
+CREATE TABLE `automation_results` (
+  `TestID` int(10) NOT NULL AUTO_INCREMENT,
+  `TestName` char(55) DEFAULT NULL,
+  `Results` char(40) DEFAULT NULL,
+  `Comments` char(250) DEFAULT NULL,
+  `RunID` int(10) DEFAULT NULL,
+  `ExecutionTime` datetime DEFAULT NULL,
+  `BuildScenario` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`TestID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1021 DEFAULT CHARSET=utf8;
