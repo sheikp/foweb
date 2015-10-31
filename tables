@@ -281,3 +281,13 @@ insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,Sk
 values (1223383,'Kevin',32001,'Kevin@verizon.com','813-617-2240','install');
 
 
+INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Sophia', '1st street', '9174445882', 'sophia@gmail.com', 'XYZ', 'CA', '9001');
+INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Jacob', 'teeffefe', '9174445883', 'sophia@gmail.com', 'XYZ', 'CA', '9002');
+INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Isabella', 'yuyuyjhjhj', '9174445884', 'sophia@gmail.com', 'XYZ', 'CA', '9003');
+INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Mason', 'ghghgvbnbn', '9174445885', 'sophia@gmail.com', 'XYZ', 'CA', '9004');
+INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Emma', 'trtrytu', '9174445886', 'sophia@gmail.com', 'XYZ', 'CA', '9005');
+INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('William', 'vbvvnvn', '9174445887', 'sophia@gmail.com', 'XYZ', 'CA', '9006');
+INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Olivia', 'rtrtrer', '9174445888', 'sophia@gmail.com', 'XYZ', 'CA', '9007');
+INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Jayden', 'dfdgdhfh', '9174445889', 'sophia@gmail.com', 'XYZ', 'CA', '9008');
+INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Ava', 'ewwqweqw', '9174445890', 'sophia@gmail.com', 'XYZ', 'CA', '9009');
+INSERT INTO `justdispatch`.`customers` (`CustomerName`, `Address`, `MobileNumber`, `Email`, `City`, `State`, `ZipCode`) VALUES ('Noah', 'vcvcvcvc', '9174445891', 'sophia@gmail.com', 'XYZ', 'CA', '9010');
