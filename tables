@@ -3,7 +3,20 @@ CREATE TABLE `coverage` (
   `CoverageZip` varchar(6) DEFAULT NULL,
   `OfficeZip` varchar(6) DEFAULT NULL,
   PRIMARY KEY (`idcoverage`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=152 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `customers` (
+  `idcustomers` int(11) NOT NULL AUTO_INCREMENT,
+  `CustomerName` varchar(45) DEFAULT NULL,
+  `Address` varchar(500) DEFAULT NULL,
+  `MobileNumber` varchar(45) DEFAULT NULL,
+  `Email` varchar(150) DEFAULT NULL,
+  `City` varchar(45) DEFAULT NULL,
+  `State` varchar(45) DEFAULT NULL,
+  `ZipCode` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idcustomers`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE `orders` (
@@ -11,20 +24,29 @@ CREATE TABLE `orders` (
   `MobileNumber` varchar(15) DEFAULT NULL,
   `ZipCode` varchar(6) DEFAULT NULL,
   `EmailAddress` varchar(100) DEFAULT NULL,
+  `rating` int(11) DEFAULT NULL,
   PRIMARY KEY (`idOrders`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
+CREATE TABLE `repair` (
+  `idrepair` int(11) NOT NULL AUTO_INCREMENT,
+  `CustomerID` int(11) DEFAULT NULL,
+  `repairdetail` varchar(500) DEFAULT NULL,
+  `rating` int(11) DEFAULT NULL,
+  PRIMARY KEY (`idrepair`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `schedule` (
   `idschedule` int(11) NOT NULL AUTO_INCREMENT,
-  `order_id` int(11) DEFAULT NULL,
+  `order_repair_id` int(11) DEFAULT NULL,
   `technician_id` int(11) DEFAULT NULL,
   `ynconfirmed` varchar(1) DEFAULT NULL,
   `sdate` datetime DEFAULT NULL,
   `slotnumber` varchar(45) DEFAULT NULL,
+  `stype` varchar(45) DEFAULT NULL,
+  `yncompleted` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`idschedule`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
-
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `technician` (
   `idTechnician` int(11) NOT NULL AUTO_INCREMENT,
@@ -33,6 +55,229 @@ CREATE TABLE `technician` (
   `OfficeZip` varchar(6) DEFAULT NULL,
   `EmailID` varchar(100) DEFAULT NULL,
   `Phone` varchar(45) DEFAULT NULL,
+  `SkillSet` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idTechnician`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+
+
+insert into coverage(coveragezip,officezip)values (01851, 01851);
+insert into coverage(coveragezip,officezip)values (01852, 01851);
+insert into coverage(coveragezip,officezip)values (01853, 01851);
+insert into coverage(coveragezip,officezip)values (01854, 01851);
+insert into coverage(coveragezip,officezip)values (01855, 01851);
+insert into coverage(coveragezip,officezip)values (01856, 01851);
+insert into coverage(coveragezip,officezip)values (01857, 01851);
+insert into coverage(coveragezip,officezip)values (01858, 01851);
+insert into coverage(coveragezip,officezip)values (01859, 01851);
+insert into coverage(coveragezip,officezip)values (01860, 01851);
+insert into coverage(coveragezip,officezip)values (01861, 01851);
+insert into coverage(coveragezip,officezip)values (01862, 01851);
+insert into coverage(coveragezip,officezip)values (01863, 01851);
+insert into coverage(coveragezip,officezip)values (01864, 01851);
+insert into coverage(coveragezip,officezip)values (01865, 01851);
+insert into coverage(coveragezip,officezip)values (01866, 01851);
+insert into coverage(coveragezip,officezip)values (01867, 01851);
+
+insert into coverage(coveragezip,officezip)values (01001, 01001);
+insert into coverage(coveragezip,officezip)values (01002, 01001);
+insert into coverage(coveragezip,officezip)values (01003, 01001);
+insert into coverage(coveragezip,officezip)values (01004, 01001);
+insert into coverage(coveragezip,officezip)values (01005, 01001);
+insert into coverage(coveragezip,officezip)values (01006, 01001);
+insert into coverage(coveragezip,officezip)values (01007, 01001);
+insert into coverage(coveragezip,officezip)values (01008, 01001);
+insert into coverage(coveragezip,officezip)values (01009, 01001);
+insert into coverage(coveragezip,officezip)values (01010, 01001);
+insert into coverage(coveragezip,officezip)values (01011, 01001);
+insert into coverage(coveragezip,officezip)values (01012, 01001);
+insert into coverage(coveragezip,officezip)values (01013, 01001);
+insert into coverage(coveragezip,officezip)values (01014, 01001);
+insert into coverage(coveragezip,officezip)values (01015, 01001);
+
+
+insert into coverage(coveragezip,officezip)values (75001, 75001);
+insert into coverage(coveragezip,officezip)values (75002, 75001);
+insert into coverage(coveragezip,officezip)values (75003, 75001);
+insert into coverage(coveragezip,officezip)values (75004, 75001);
+insert into coverage(coveragezip,officezip)values (75005, 75001);
+insert into coverage(coveragezip,officezip)values (75006, 75001);
+insert into coverage(coveragezip,officezip)values (75007, 75001);
+insert into coverage(coveragezip,officezip)values (75008, 75001);
+insert into coverage(coveragezip,officezip)values (75009, 75001);
+insert into coverage(coveragezip,officezip)values (75010, 75001);
+insert into coverage(coveragezip,officezip)values (75011, 75001);
+insert into coverage(coveragezip,officezip)values (75013, 75001);
+insert into coverage(coveragezip,officezip)values (75014, 75001);
+insert into coverage(coveragezip,officezip)values (75015, 75001);
+insert into coverage(coveragezip,officezip)values (75016, 75001);
+insert into coverage(coveragezip,officezip)values (75017, 75001);
+insert into coverage(coveragezip,officezip)values (75019, 75001);
+insert into coverage(coveragezip,officezip)values (75020, 75001);
+
+insert into coverage(coveragezip,officezip)values (90001, 90001);
+insert into coverage(coveragezip,officezip)values (90002, 90001);
+insert into coverage(coveragezip,officezip)values (90003, 90001);
+insert into coverage(coveragezip,officezip)values (90004, 90001);
+insert into coverage(coveragezip,officezip)values (90005, 90001);
+insert into coverage(coveragezip,officezip)values (90006, 90001);
+insert into coverage(coveragezip,officezip)values (90007, 90001);
+insert into coverage(coveragezip,officezip)values (90008, 90001);
+insert into coverage(coveragezip,officezip)values (90009, 90001);
+insert into coverage(coveragezip,officezip)values (90010, 90001);
+insert into coverage(coveragezip,officezip)values (90011, 90001);
+insert into coverage(coveragezip,officezip)values (90012, 90001);
+insert into coverage(coveragezip,officezip)values (90013, 90001);
+insert into coverage(coveragezip,officezip)values (90014, 90001);
+insert into coverage(coveragezip,officezip)values (90015, 90001);
+
+
+insert into coverage(coveragezip,officezip)values (60001, 60001);
+insert into coverage(coveragezip,officezip)values (60002, 60001);
+insert into coverage(coveragezip,officezip)values (60003, 60001);
+insert into coverage(coveragezip,officezip)values (60004, 60001);
+insert into coverage(coveragezip,officezip)values (60005, 60001);
+insert into coverage(coveragezip,officezip)values (60006, 60001);
+insert into coverage(coveragezip,officezip)values (60007, 60001);
+insert into coverage(coveragezip,officezip)values (60008, 60001);
+insert into coverage(coveragezip,officezip)values (60009, 60001);
+insert into coverage(coveragezip,officezip)values (60010, 60001);
+insert into coverage(coveragezip,officezip)values (60011, 60001);
+insert into coverage(coveragezip,officezip)values (60012, 60001);
+insert into coverage(coveragezip,officezip)values (60013, 60001);
+insert into coverage(coveragezip,officezip)values (60014, 60001);
+insert into coverage(coveragezip,officezip)values (60015, 60001);
+
+
+insert into coverage(coveragezip,officezip)values (20001, 20001);
+insert into coverage(coveragezip,officezip)values (20002, 20001);
+insert into coverage(coveragezip,officezip)values (20003, 20001);
+insert into coverage(coveragezip,officezip)values (20004, 20001);
+insert into coverage(coveragezip,officezip)values (20005, 20001);
+insert into coverage(coveragezip,officezip)values (20006, 20001);
+insert into coverage(coveragezip,officezip)values (20007, 20001);
+insert into coverage(coveragezip,officezip)values (20008, 20001);
+insert into coverage(coveragezip,officezip)values (20009, 20001);
+insert into coverage(coveragezip,officezip)values (20010, 20001);
+insert into coverage(coveragezip,officezip)values (20011, 20001);
+insert into coverage(coveragezip,officezip)values (20012, 20001);
+insert into coverage(coveragezip,officezip)values (20013, 20001);
+insert into coverage(coveragezip,officezip)values (20014, 20001);
+insert into coverage(coveragezip,officezip)values (20015, 20001);
+
+
+insert into coverage(coveragezip,officezip)values (19701, 19701);
+insert into coverage(coveragezip,officezip)values (19702, 19701);
+insert into coverage(coveragezip,officezip)values (19703, 19701);
+insert into coverage(coveragezip,officezip)values (19704, 19701);
+insert into coverage(coveragezip,officezip)values (19705, 19701);
+insert into coverage(coveragezip,officezip)values (19706, 19701);
+insert into coverage(coveragezip,officezip)values (19707, 19701);
+insert into coverage(coveragezip,officezip)values (19708, 19701);
+insert into coverage(coveragezip,officezip)values (19709, 19701);
+insert into coverage(coveragezip,officezip)values (19710, 19701);
+insert into coverage(coveragezip,officezip)values (19711, 19701);
+insert into coverage(coveragezip,officezip)values (19712, 19701);
+insert into coverage(coveragezip,officezip)values (19713, 19701);
+insert into coverage(coveragezip,officezip)values (19714, 19701);
+insert into coverage(coveragezip,officezip)values (19715, 19701);
+
+
+insert into coverage(coveragezip,officezip)values (32001, 32001);
+insert into coverage(coveragezip,officezip)values (32002, 32001);
+insert into coverage(coveragezip,officezip)values (32003, 32001);
+insert into coverage(coveragezip,officezip)values (32004, 32001);
+insert into coverage(coveragezip,officezip)values (32005, 32001);
+insert into coverage(coveragezip,officezip)values (32006, 32001);
+insert into coverage(coveragezip,officezip)values (32007, 32001);
+insert into coverage(coveragezip,officezip)values (32008, 32001);
+insert into coverage(coveragezip,officezip)values (32009, 32001);
+insert into coverage(coveragezip,officezip)values (32010, 32001);
+insert into coverage(coveragezip,officezip)values (32011, 32001);
+insert into coverage(coveragezip,officezip)values (32012, 32001);
+insert into coverage(coveragezip,officezip)values (32013, 32001);
+insert into coverage(coveragezip,officezip)values (32014, 32001);
+insert into coverage(coveragezip,officezip)values (32015, 32001);
+
+
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223344,'Emma',01001,'emma@verizon.com','813-617-2201','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223345,'Noah',01001,'Noah@verizon.com','813-617-2202','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223346,'Liam',01001,'Liam@verizon.com','813-617-2203','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223347,'Mason',01001,'Mason@verizon.com','813-617-2204','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223348,'Jacob',01001,'Jacob@verizon.com','813-617-2205','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223349,'William',01001,'William@verizon.com','813-617-2206','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223350,'Ethan',01001,'Ethan@verizon.com','813-617-2207','install');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223351,'Olivia',01001,'Olivia@verizon.com','813-617-2208','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223352,'Sophia',01001,'Sophia@verizon.com','813-617-2209','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223353,'Michael',01851,'Michael@verizon.com','813-617-2210','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223354,'Alexander',01851,'Alexander@verizon.com','813-617-2211','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223355,'James',01851,'James@verizon.com','813-617-2212','repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223356,'Daniel',75001,'Daniel@verizon.com','813-617-2213','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223357,'Elijah',75001,'Elijah@verizon.com','813-617-2214','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223358,'Benjamin',75001,'Benjamin@verizon.com','813-617-2215','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223359,'Isabella',90001,'Isabella@verizon.com','813-617-2216','install');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223360,'Emily',90001,'Emily@verizon.com','813-617-2217','repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223361,'Logan',90001,'Logan@verizon.com','813-617-2218','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223362,'Aiden',90001,'Aiden@verizon.com','813-617-2219','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223363,'Jayden',90001,'Jayden@verizon.com','813-617-2220','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223364,'Sofia',90001,'Sofia@verizon.com','813-617-2221','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223365,'Matthew',90001,'Matthew@verizon.com','813-617-2222','repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223366,'Jackson',90001,'Jackson@verizon.com','813-617-2223','install');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223367,'David',90001,'David@verizon.com','813-617-2224','repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223368,'Lucas',90001,'Lucas@verizon.com','813-617-2225','install');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223369,'Joseph',60001,'Joseph@verizon.com','813-617-2226','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223370,'Elizabeth',60001,'Elizabeth@verizon.com','813-617-2227','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223371,'Anthony',60001,'Anthony@verizon.com','813-617-2228','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223372,'Andrew',60001,'Andrew@verizon.com','813-617-2229','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223373,'Samuel',60001,'Samuel@verizon.com','813-617-2230','install');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223374,'Gabriel',20001,'Gabriel@verizon.com','813-617-2231','install');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223375,'Joshua',20001,'Joshua@verizon.com','813-617-2232','repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223376,'Amelia',20001,'Amelia@verizon.com','813-617-2233','repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223377,'Christopher',19701,'Christopher@verizon.com','813-617-2234','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223378,'Ryan',19701,'Ryan@verizon.com','813-617-2235','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223379,'Sebastian',19701,'Sebastian@verizon.com','813-617-2236','install,repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223380,'Jack',19701,'Jack@verizon.com','813-617-2237','repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223381,'Jaxon',32001,'Jaxon@verizon.com','813-617-2238','repair');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223382,'Robert',32001,'Robert@verizon.com','813-617-2239','install');
+insert into technician(TechnicianEmpID,TechnicianName,OfficeZip,EmailID,Phone,SkillSet) 
+values (1223383,'Kevin',32001,'Kevin@verizon.com','813-617-2240','install');
+
 
